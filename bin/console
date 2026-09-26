@@ -1,0 +1,15 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require 'bundler/setup'
+require 'dotenv/load'
+require 'ruby_llm/providers/qiniu'
+
+require 'irb'
+
+RubyLLM.configure do |config|
+  config.qiniu_api_key = ENV.fetch('QINIU_API_KEY', nil)
+  config.qiniu_api_base = ENV.fetch('QINIU_BASE_URL', 'https://api.qnaigc.com')
+end
+
+IRB.start(__FILE__)
