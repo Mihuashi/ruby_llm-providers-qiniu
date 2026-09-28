@@ -1,0 +1,66 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: "<QINIU_BASE_URL>/bypass/anthropic/v1/messages"
+    body:
+      encoding: UTF-8
+      string: '{"model":"anthropic/claude-sonnet-5","messages":[{"role":"user","content":[{"type":"text","text":"What
+        is the capital of France?"}]}],"stream":false,"max_tokens":128000}'
+    headers:
+      User-Agent:
+      - Faraday v2.14.4
+      Authorization:
+      - Bearer <AUTH_TOKEN>
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - ''
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, PATCH, DELETE, OPTIONS
+      Access-Control-Allow-Origin:
+      - ''
+      Access-Control-Expose-Headers:
+      - Http_x_reqid
+      Http-X-Reqid:
+      - chatptmsg-b2a38a419284451682dadb09821f036d
+      X-Request-Id:
+      - chatptmsg-b2a38a419284451682dadb09821f036d
+      Server:
+      - APISIX
+      Cache-Control:
+      - no-cache
+      Content-Length:
+      - '934'
+      Connection:
+      - keep-alive
+      Date:
+      - Mon, 28 Sep 2026 07:54:56 GMT
+      Eo-Log-Uuid:
+      - '8753657181452655309'
+      Eo-Cache-Status:
+      - MISS
+    body:
+      encoding: UTF-8
+      string: '{"model":"anthropic/claude-sonnet-5","id":"msg_bdrk_vmeubati7scluhu7czxrt5kwhbtzdyod6epnd53tghly2ipja4cq","type":"message","role":"assistant","content":[{"type":"text","text":"#
+        Paris\n\n**Paris** is the capital of France.\n\nA few quick facts:\n- It''s
+        located in the north-central part of the country, on the Seine River\n- It''s
+        the largest city in France by population\n- Known for landmarks like the Eiffel
+        Tower, Louvre Museum, and Notre-Dame Cathedral\n- Serves as France''s political,
+        economic, and cultural center\n\nLet me know if you''d like more information
+        about Paris or France!"}],"container":null,"stop_reason":"end_turn","stop_sequence":null,"stop_details":null,"usage":{"input_tokens":14,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"cache_creation":{"ephemeral_5m_input_tokens":0,"ephemeral_1h_input_tokens":0},"output_tokens":138,"output_tokens_details":{"thinking_tokens":0},"service_tier":"standard"}}'
+  recorded_at: Mon, 28 Sep 2026 07:54:59 GMT
+recorded_with: VCR 6.4.0

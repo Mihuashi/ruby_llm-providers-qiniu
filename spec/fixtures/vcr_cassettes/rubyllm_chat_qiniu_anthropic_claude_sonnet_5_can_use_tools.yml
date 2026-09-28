@@ -1,0 +1,121 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: "<QINIU_BASE_URL>/bypass/anthropic/v1/messages"
+    body:
+      encoding: UTF-8
+      string: '{"model":"anthropic/claude-sonnet-5","messages":[{"role":"user","content":[{"type":"text","text":"What''s
+        the weather in Berlin? Use 52.5200, 13.4050."}]}],"stream":false,"max_tokens":128000,"tools":[{"name":"weather","description":"Gets
+        current weather for a location","input_schema":{"type":"object","properties":{"latitude":{"type":"string","description":"Latitude"},"longitude":{"type":"string","description":"Longitude"}},"required":["latitude","longitude"],"additionalProperties":false,"strict":true}}]}'
+    headers:
+      User-Agent:
+      - Faraday v2.14.4
+      Authorization:
+      - Bearer <AUTH_TOKEN>
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - ''
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, PATCH, DELETE, OPTIONS
+      Access-Control-Allow-Origin:
+      - ''
+      Access-Control-Expose-Headers:
+      - Http_x_reqid
+      Http-X-Reqid:
+      - chatptmsg-38567ad22ad3402b934200c80941bd6a
+      X-Request-Id:
+      - chatptmsg-38567ad22ad3402b934200c80941bd6a
+      Server:
+      - APISIX
+      Cache-Control:
+      - no-cache
+      Content-Length:
+      - '1051'
+      Connection:
+      - keep-alive
+      Date:
+      - Mon, 28 Sep 2026 08:15:12 GMT
+      Eo-Log-Uuid:
+      - '4622289159287387617'
+      Eo-Cache-Status:
+      - MISS
+    body:
+      encoding: UTF-8
+      string: '{"model":"anthropic/claude-sonnet-5","id":"msg_bdrk_qwvkg6gp57u3zmj6kvvmqqlkmf7b5zzjg3bge3g6gy2wpmgzg3la","type":"message","role":"assistant","content":[{"type":"thinking","thinking":"","signature":"EpACCnkIEhABGAIqQL5fzUD9sVa7b6dPdx463EFOZKPUXscg6tR6x/cRvN11z/7geYR2O5jXGznRvLgg8YYWh0GrsOORegiIc91uBNAyDmNsYXVkZS1zYWZmcm9uOABCCHRoaW5raW5nWgw5OTIzODI1ODI0NDGoAZPE6NUGEgwRxRAPgsvhEVd1jQQaDGitimYcXoxkLQcPhCIwUNptAUlR/F3trl50sE7sDXAXBe3T1zqkKCzCwUMAOh1qGqaB8zBvsSMBUztwWGL8KkUplgAEpxQOs8Gdhta33pWXVN5rqHU4LvTGPCx+Q3ip3xrz6qVOHBW5/qjhCPntoGh6jfCDoUAoIcpYvaFkzHHcmBxe0uwYAQ=="},{"type":"tool_use","id":"toolu_bdrk_01HBSNEnNJfs6ojbhg9SPtKs","name":"weather","input":{"latitude":"52.5200","longitude":"13.4050"}}],"container":null,"stop_reason":"tool_use","stop_sequence":null,"stop_details":null,"usage":{"input_tokens":511,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"cache_creation":{"ephemeral_5m_input_tokens":0,"ephemeral_1h_input_tokens":0},"output_tokens":98,"output_tokens_details":{"thinking_tokens":19},"service_tier":"standard"}}'
+  recorded_at: Mon, 28 Sep 2026 08:15:15 GMT
+- request:
+    method: post
+    uri: "<QINIU_BASE_URL>/bypass/anthropic/v1/messages"
+    body:
+      encoding: UTF-8
+      string: '{"model":"anthropic/claude-sonnet-5","messages":[{"role":"user","content":[{"type":"text","text":"What''s
+        the weather in Berlin? Use 52.5200, 13.4050."}]},{"role":"assistant","content":[{"type":"thinking","thinking":"","signature":"EpACCnkIEhABGAIqQL5fzUD9sVa7b6dPdx463EFOZKPUXscg6tR6x/cRvN11z/7geYR2O5jXGznRvLgg8YYWh0GrsOORegiIc91uBNAyDmNsYXVkZS1zYWZmcm9uOABCCHRoaW5raW5nWgw5OTIzODI1ODI0NDGoAZPE6NUGEgwRxRAPgsvhEVd1jQQaDGitimYcXoxkLQcPhCIwUNptAUlR/F3trl50sE7sDXAXBe3T1zqkKCzCwUMAOh1qGqaB8zBvsSMBUztwWGL8KkUplgAEpxQOs8Gdhta33pWXVN5rqHU4LvTGPCx+Q3ip3xrz6qVOHBW5/qjhCPntoGh6jfCDoUAoIcpYvaFkzHHcmBxe0uwYAQ=="},{"type":"tool_use","id":"toolu_bdrk_01HBSNEnNJfs6ojbhg9SPtKs","name":"weather","input":{"latitude":"52.5200","longitude":"13.4050"}}]},{"role":"user","content":[{"type":"tool_result","tool_use_id":"toolu_bdrk_01HBSNEnNJfs6ojbhg9SPtKs","content":[{"type":"text","text":"Current
+        weather at 52.5200, 13.4050: 15°C, Wind: 10 km/h"}]}]}],"stream":false,"max_tokens":128000,"tools":[{"name":"weather","description":"Gets
+        current weather for a location","input_schema":{"type":"object","properties":{"latitude":{"type":"string","description":"Latitude"},"longitude":{"type":"string","description":"Longitude"}},"required":["latitude","longitude"],"additionalProperties":false,"strict":true}}]}'
+    headers:
+      User-Agent:
+      - Faraday v2.14.4
+      Authorization:
+      - Bearer <AUTH_TOKEN>
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - ''
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, PATCH, DELETE, OPTIONS
+      Access-Control-Allow-Origin:
+      - ''
+      Access-Control-Expose-Headers:
+      - Http_x_reqid
+      Http-X-Reqid:
+      - chatptmsg-f422b2e36a54469fa54cad6ff87db2d5
+      X-Request-Id:
+      - chatptmsg-f422b2e36a54469fa54cad6ff87db2d5
+      Server:
+      - APISIX
+      Cache-Control:
+      - no-cache
+      Content-Length:
+      - '616'
+      Connection:
+      - keep-alive
+      Date:
+      - Mon, 28 Sep 2026 08:15:15 GMT
+      Eo-Log-Uuid:
+      - '10257978368420543588'
+      Eo-Cache-Status:
+      - MISS
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJtb2RlbCI6ImFudGhyb3BpYy9jbGF1ZGUtc29ubmV0LTUiLCJpZCI6Im1zZ19iZHJrXzZ0a3JlenFla2Fqb2h5Y2twcGltamI0dHpjdXU2eXVxenpuYW9iZ29xZDJqcnh6dHVrbnEiLCJ0eXBlIjoibWVzc2FnZSIsInJvbGUiOiJhc3Npc3RhbnQiLCJjb250ZW50IjpbeyJ0eXBlIjoidGV4dCIsInRleHQiOiJUaGUgY3VycmVudCB3ZWF0aGVyIGluIEJlcmxpbiAoNTIuNTIwMCwgMTMuNDA1MCkgaXMgKioxNcKwQyoqIHdpdGggd2luZCBzcGVlZHMgb2YgKioxMCBrbS9oKiouIn1dLCJjb250YWluZXIiOm51bGwsInN0b3BfcmVhc29uIjoiZW5kX3R1cm4iLCJzdG9wX3NlcXVlbmNlIjpudWxsLCJzdG9wX2RldGFpbHMiOm51bGwsInVzYWdlIjp7ImlucHV0X3Rva2VucyI6NjQ1LCJjYWNoZV9jcmVhdGlvbl9pbnB1dF90b2tlbnMiOjAsImNhY2hlX3JlYWRfaW5wdXRfdG9rZW5zIjowLCJjYWNoZV9jcmVhdGlvbiI6eyJlcGhlbWVyYWxfNW1faW5wdXRfdG9rZW5zIjowLCJlcGhlbWVyYWxfMWhfaW5wdXRfdG9rZW5zIjowfSwib3V0cHV0X3Rva2VucyI6NDQsIm91dHB1dF90b2tlbnNfZGV0YWlscyI6eyJ0aGlua2luZ190b2tlbnMiOjB9LCJzZXJ2aWNlX3RpZXIiOiJzdGFuZGFyZCJ9fQ==
+  recorded_at: Mon, 28 Sep 2026 08:15:18 GMT
+recorded_with: VCR 6.4.0

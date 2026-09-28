@@ -1,0 +1,199 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: "<QINIU_BASE_URL>/bypass/vertex/v1/models/google/gemini-3.8-flash:generateContent"
+    body:
+      encoding: UTF-8
+      string: '{"contents":[{"role":"user","parts":[{"text":"Who created the programming
+        language Ruby?"}]}],"generationConfig":{}}'
+    headers:
+      User-Agent:
+      - Faraday v2.14.4
+      Authorization:
+      - Bearer <AUTH_TOKEN>
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - ''
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, PATCH, DELETE, OPTIONS
+      Access-Control-Allow-Origin:
+      - ''
+      Access-Control-Expose-Headers:
+      - Http_x_reqid
+      Http-X-Reqid:
+      - chatptvtx-f0e6c3bcf13647f689080c82cc46a709
+      X-Request-Id:
+      - chatptvtx-f0e6c3bcf13647f689080c82cc46a709
+      Server:
+      - APISIX
+      Cache-Control:
+      - no-cache
+      Content-Length:
+      - '1831'
+      Connection:
+      - keep-alive
+      Date:
+      - Mon, 28 Sep 2026 07:56:45 GMT
+      Eo-Log-Uuid:
+      - '14253892859785085432'
+      Eo-Cache-Status:
+      - MISS
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "candidates": [
+            {
+              "content": {
+                "role": "model",
+                "parts": [
+                  {
+                    "text": "The programming language Ruby was created by **Yukihiro Matsumoto** (often referred to as **\"Matz\"**). \n\nHe began developing the language in 1993, and it was officially released to the public in 1995. Matsumoto's goal was to create a true object-oriented language that made programmers happy and emphasized human needs over computer needs.",
+                    "thoughtSignature": "AY89a18MwRbVxdY5+wg6S8r3OzC2sH899JYbplxp7ACunmhId2PHn66YNwhYJzWZRtMRyOHPiRxspqM4Pi/SIprcCaNs1mB6y1JogBlWP+/wC5YCtMRNzXzRl3Wfumwjrr1gCVxieFy3C6AnAEFBaImDu4wkq46K8myoa/Ak4cpi/FuNvWvdrSh7OekyJUcN24wkl6I70TFLBRqHrxDTz4vMjy5shbnBYwPZiv/KqQ8slJ8uTwmJZxdzEOXyonq5To5xDAM6w7ZsgO4vljRZtnZpRtfxABaHKY8CyTerhZXamRqFvKaxtCwKo/BXfQTuanP48db0xMXTN9L35CUTtohoENwzHJFTzzGW4PCSu9XgmF3TOv82ONrY+zBZKwZvNBmqgfZFKbGhdVA4d0qywFJ8uPbsS5EQ1QqzRt1OkmBuSzLJxp9BwI60f0TA8YZELzdJSlaHYt3ccjNfId5yoPpxsy5hkbgspxWVEreMzNpyioYdbX/TQElFzAtcRFYNFWEvS6RPW6Y0KU4BL/6K41SUgTWIdaa2ZfdCg9pkPTeMAaMQbK9XQIPaHSJX7tDudejyP5le/xD15ZYmGIBGPaErKDYTXEq6EBbA1w+/XYr+FVOVYsZ7aD6kwyRk1HhyL/FHR/GvXM1sYeLzVMlPJA8EJ23vKgFv5tbMa2y9qsnVKPaolrUuAA5Mg6eiT4RtrKTe4fFd2M59fWYX2lBKo4SBnGx5DEd2ifdG"
+                  }
+                ]
+              },
+              "finishReason": "STOP"
+            }
+          ],
+          "usageMetadata": {
+            "promptTokenCount": 7,
+            "candidatesTokenCount": 79,
+            "totalTokenCount": 209,
+            "trafficType": "ON_DEMAND",
+            "promptTokensDetails": [
+              {
+                "modality": "TEXT",
+                "tokenCount": 7
+              }
+            ],
+            "candidatesTokensDetails": [
+              {
+                "modality": "TEXT",
+                "tokenCount": 79
+              }
+            ],
+            "thoughtsTokenCount": 123
+          },
+          "modelVersion": "gemini-3.8-flash",
+          "createTime": "2026-09-28T07:56:46.062908Z",
+          "responseId": "vh26arzrA76bpucPwvej0Ac"
+        }
+  recorded_at: Mon, 28 Sep 2026 07:56:48 GMT
+- request:
+    method: post
+    uri: "<QINIU_BASE_URL>/bypass/vertex/v1/models/google/gemini-3.8-flash:generateContent"
+    body:
+      encoding: UTF-8
+      string: '{"contents":[{"role":"user","parts":[{"text":"Who created the programming
+        language Ruby?"}]},{"role":"model","parts":[{"thought":true,"thoughtSignature":"AY89a18MwRbVxdY5+wg6S8r3OzC2sH899JYbplxp7ACunmhId2PHn66YNwhYJzWZRtMRyOHPiRxspqM4Pi/SIprcCaNs1mB6y1JogBlWP+/wC5YCtMRNzXzRl3Wfumwjrr1gCVxieFy3C6AnAEFBaImDu4wkq46K8myoa/Ak4cpi/FuNvWvdrSh7OekyJUcN24wkl6I70TFLBRqHrxDTz4vMjy5shbnBYwPZiv/KqQ8slJ8uTwmJZxdzEOXyonq5To5xDAM6w7ZsgO4vljRZtnZpRtfxABaHKY8CyTerhZXamRqFvKaxtCwKo/BXfQTuanP48db0xMXTN9L35CUTtohoENwzHJFTzzGW4PCSu9XgmF3TOv82ONrY+zBZKwZvNBmqgfZFKbGhdVA4d0qywFJ8uPbsS5EQ1QqzRt1OkmBuSzLJxp9BwI60f0TA8YZELzdJSlaHYt3ccjNfId5yoPpxsy5hkbgspxWVEreMzNpyioYdbX/TQElFzAtcRFYNFWEvS6RPW6Y0KU4BL/6K41SUgTWIdaa2ZfdCg9pkPTeMAaMQbK9XQIPaHSJX7tDudejyP5le/xD15ZYmGIBGPaErKDYTXEq6EBbA1w+/XYr+FVOVYsZ7aD6kwyRk1HhyL/FHR/GvXM1sYeLzVMlPJA8EJ23vKgFv5tbMa2y9qsnVKPaolrUuAA5Mg6eiT4RtrKTe4fFd2M59fWYX2lBKo4SBnGx5DEd2ifdG"},{"text":"The
+        programming language Ruby was created by **Yukihiro Matsumoto** (often referred
+        to as **\"Matz\"**). \n\nHe began developing the language in 1993, and it
+        was officially released to the public in 1995. Matsumoto''s goal was to create
+        a true object-oriented language that made programmers happy and emphasized
+        human needs over computer needs."}]},{"role":"user","parts":[{"text":"What
+        year was Ruby first released?"}]}],"generationConfig":{}}'
+    headers:
+      User-Agent:
+      - Faraday v2.14.4
+      Authorization:
+      - Bearer <AUTH_TOKEN>
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - ''
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, PATCH, DELETE, OPTIONS
+      Access-Control-Allow-Origin:
+      - ''
+      Access-Control-Expose-Headers:
+      - Http_x_reqid
+      Http-X-Reqid:
+      - chatptvtx-484b82da2521468b89f4d7747b7789a3
+      X-Request-Id:
+      - chatptvtx-484b82da2521468b89f4d7747b7789a3
+      Server:
+      - APISIX
+      Cache-Control:
+      - no-cache
+      Content-Length:
+      - '1579'
+      Connection:
+      - keep-alive
+      Date:
+      - Mon, 28 Sep 2026 07:56:48 GMT
+      Eo-Log-Uuid:
+      - '16933637325182050549'
+      Eo-Cache-Status:
+      - MISS
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "candidates": [
+            {
+              "content": {
+                "role": "model",
+                "parts": [
+                  {
+                    "text": "Ruby was first released to the public in **1995** (specifically, version 0.95 was released on December 21, 1995).",
+                    "thoughtSignature": "AY89a1+bM6bmR4WrlMUfphCC4DQ3Zg0GGjirBRSY2Uq0OUlHUIspp6N3zYsxmc0Hyqi/iPD28T7oU2dyuXAyGwKtB6CH8k19EixtntXKQ0gzsUmXdJCXCj77yCJgCB+dxd89fLQz1ojYRsrSXJPGfCq6GDa4SUpJPTLPtmeonkbn9vnOAXOnsop8PDVPW7RsJYbdgVDyoZp7ckx4OJqcDoaMcpEh1Hu9bquGDrG4WNn7LAP9iTrTGY6bBTk61uiO8IfcoVxV482Ayc/54L8CFe+iugNmbSIFonWteASGCobqL18/V4gV/nZOkO3/Zq+9SU9Fy2/VgRdimR2/uQIMZrTS7MyeM4UQlu4XDQTNiKdI583WRP599fd7nguLVvpI47JFfdWKiJtNNqM1N2T2t8FU2IDJlc7LCIuOeTRvoazxt1rKdb0TCYK8h+wmtOf9+KZajO+ciuEXG5kckeIW0X6ErBuvmDUfKewUooBITNYDnwoJYex7XSisHTlcbY3jbkxoz1xWAThQS4YDuzZthjYyBNWVI7xPRA+qDL01ThK9YU9fb35OxVs5M0p8VO4MdVlczfqNqMCRcxXsbvhyMt3nJr7DiROIfgL9JqoS6eiATMOeFmF8GlrImqvXJwejBpPEh8QSGrFtbrXi+taZrWv3XhWtW74OFlG8GtfsuBXqnJWsxrIMqnzw1SsdAZ+XCDRJ3ehcyp1Z"
+                  }
+                ]
+              },
+              "finishReason": "STOP"
+            }
+          ],
+          "usageMetadata": {
+            "promptTokenCount": 93,
+            "candidatesTokenCount": 37,
+            "totalTokenCount": 261,
+            "trafficType": "ON_DEMAND",
+            "promptTokensDetails": [
+              {
+                "modality": "TEXT",
+                "tokenCount": 93
+              }
+            ],
+            "candidatesTokensDetails": [
+              {
+                "modality": "TEXT",
+                "tokenCount": 37
+              }
+            ],
+            "thoughtsTokenCount": 131
+          },
+          "modelVersion": "gemini-3.8-flash",
+          "createTime": "2026-09-28T07:56:49.430906Z",
+          "responseId": "wR26arqmGviO998Px6LnkAk"
+        }
+  recorded_at: Mon, 28 Sep 2026 07:56:51 GMT
+recorded_with: VCR 6.4.0

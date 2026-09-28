@@ -1,0 +1,98 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: "<QINIU_BASE_URL>/bypass/vertex/v1/models/google/gemini-3.8-flash:generateContent"
+    body:
+      encoding: UTF-8
+      string: '{"contents":[{"role":"user","parts":[{"text":"Generate a person named
+        John who is 30 years old"}]}],"generationConfig":{"responseMimeType":"application/json","responseJsonSchema":{"type":"object","properties":{"name":{"type":"string"},"age":{"type":"integer"}},"required":["name","age"],"additionalProperties":false}}}'
+    headers:
+      User-Agent:
+      - Faraday v2.14.4
+      Authorization:
+      - Bearer <AUTH_TOKEN>
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - ''
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, PATCH, DELETE, OPTIONS
+      Access-Control-Allow-Origin:
+      - ''
+      Access-Control-Expose-Headers:
+      - Http_x_reqid
+      Http-X-Reqid:
+      - chatptvtx-01fb3f220fe14f8fbd74c0fd47557090
+      X-Request-Id:
+      - chatptvtx-01fb3f220fe14f8fbd74c0fd47557090
+      Server:
+      - APISIX
+      Cache-Control:
+      - no-cache
+      Content-Length:
+      - '1904'
+      Connection:
+      - keep-alive
+      Date:
+      - Mon, 28 Sep 2026 07:52:43 GMT
+      Eo-Log-Uuid:
+      - '10180700154429289515'
+      Eo-Cache-Status:
+      - MISS
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "candidates": [
+            {
+              "content": {
+                "role": "model",
+                "parts": [
+                  {
+                    "text": "{\"name\":\"John\",\"age\":30}",
+                    "thoughtSignature": "AY89a1/sbwVhhtrglAkwK1ACj0PV4cI9gha9/zBIF4Im7NxGgw3955I0f7pN90vKBC000M9LLTvxShKF0zttSutDyaEkhAhjA1BO+nVz2V//wAT33TEVxDfGYkTZLq77D6Kjqy/HFCzAahKJ4PMBCX1wVuAW7c/CUyWdS4jg4do0zEB8ID6v/YmhmXKkq0mVBZvSJi5VqWcycuHht32Din4wJIBFu032esDjvDVltFjM8PxC7zvXo7kBZ0b/bAoEX1FEVk4XA8Z+d6YaqEz5gCaaHxojQKUKmQJnEYn8CCf34ahaTXo5sYwhgUGglIZmismo1YFUcxON9GLYsSmzdwz5jxPdZg85+4mczRQ+GMo99AKEzAZawYDjctuaA190mu0o/kLL9b1INA9t0wp5NXU5gyVZn8opxvMtoRxn8wVHhIY3fb9Nxnf/LFpouYiHgKXHt3txOgFz2V2DdpTM77vKzeAkuhw5Zbo73PV8a8WwZjQ2VdU2Ev4nmQAIPJ9TsqwSk6hGKfolA0Z133kZIrbNBm0Mb78aHV1l3cvW0mW2GvbALct8GyCdajblqb92QzT4oddtXfbXj0kUJMNbG4GGvosH3uXV23OS5aciHi3hyUhky+pQIbNV5Z4jKDCJn7CjhKD3GBQGoz8ebjoFtMMMWeJGnhdIh2dK/3n9BlZEVA8C3UqqiwuSz2tDQO4bsnKRJ0dZQ++QSTx4Br3u/3TJJJxeAqCv27ueli3T32drP2ltDJLgbgf3rQuNw5W+G3cLtKWPZUUcpcDV2UhTpz43pHg9zJC8WDYqD6tVNNI3XRIRuOhUe7T2nH7UdlF3xvC8Un2pq6JliniwfhBGNWegtkfT/MEwMmcy7Os/Ghc3BSRucod0Z6G17vbIJu6wvoDjFNTDupVYYp9BIJJQSDenQwIujofExmt5o9+O9vw89IMcF59TsaG7yiYDGEytcKVxeY2l7pUEF4Sqy//YCPVbW2cfJgf4+izwjLyOPLCTO3WIs0SHtou6Fm4SqfnxHfELnSb3Rjx+iwEQMVTwug3xpajteZMgvXsSyDTlxI2O44TIncy6B4CJZ6xt8uf82CyUj12aRPkrmJ+73gdSTWz8S3ewEKJWkjCd"
+                  }
+                ]
+              },
+              "finishReason": "STOP"
+            }
+          ],
+          "usageMetadata": {
+            "promptTokenCount": 77,
+            "candidatesTokenCount": 10,
+            "totalTokenCount": 318,
+            "trafficType": "ON_DEMAND",
+            "promptTokensDetails": [
+              {
+                "modality": "TEXT",
+                "tokenCount": 77
+              }
+            ],
+            "candidatesTokensDetails": [
+              {
+                "modality": "TEXT",
+                "tokenCount": 10
+              }
+            ],
+            "thoughtsTokenCount": 231
+          },
+          "modelVersion": "gemini-3.8-flash",
+          "createTime": "2026-09-28T07:52:44.334224Z",
+          "responseId": "zBy6apCzFPGfpucPhpfeuQ0"
+        }
+  recorded_at: Mon, 28 Sep 2026 07:52:47 GMT
+recorded_with: VCR 6.4.0

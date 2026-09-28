@@ -1,0 +1,97 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: "<QINIU_BASE_URL>/bypass/vertex/v1/models/google/gemini-3.1-flash-lite:generateContent"
+    body:
+      encoding: UTF-8
+      string: '{"contents":[{"role":"user","parts":[{"text":"Generate a person named
+        John who is 30 years old"}]}],"generationConfig":{"responseMimeType":"application/json","responseJsonSchema":{"type":"object","properties":{"name":{"type":"string"},"age":{"type":"integer"}},"required":["name","age"],"additionalProperties":false}}}'
+    headers:
+      User-Agent:
+      - Faraday v2.14.4
+      Authorization:
+      - Bearer <AUTH_TOKEN>
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - ''
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, PATCH, DELETE, OPTIONS
+      Access-Control-Allow-Origin:
+      - ''
+      Access-Control-Expose-Headers:
+      - Http_x_reqid
+      Http-X-Reqid:
+      - chatptvtx-0de9762832654ec684af9c0d55b7c005
+      X-Request-Id:
+      - chatptvtx-0de9762832654ec684af9c0d55b7c005
+      Server:
+      - APISIX
+      Cache-Control:
+      - no-cache
+      Content-Length:
+      - '885'
+      Connection:
+      - keep-alive
+      Date:
+      - Mon, 28 Sep 2026 07:52:39 GMT
+      Eo-Log-Uuid:
+      - '6512597416582819119'
+      Eo-Cache-Status:
+      - MISS
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "candidates": [
+            {
+              "content": {
+                "role": "model",
+                "parts": [
+                  {
+                    "text": "{\n  \"name\": \"John\",\n  \"age\": 30\n}",
+                    "thoughtSignature": "AY89a1+hQF5x+XGTKJgliSpa7ySY7yJU1+rbZYcl/T21isU8iGZuYgijnS7rb7xAGY294V5eb0eoTqs5XrTJlXmzl73Lqi5MRjKK23all8fhQQjHqBqee5bk"
+                  }
+                ]
+              },
+              "finishReason": "STOP"
+            }
+          ],
+          "usageMetadata": {
+            "promptTokenCount": 77,
+            "candidatesTokenCount": 19,
+            "totalTokenCount": 96,
+            "trafficType": "ON_DEMAND",
+            "promptTokensDetails": [
+              {
+                "modality": "TEXT",
+                "tokenCount": 77
+              }
+            ],
+            "candidatesTokensDetails": [
+              {
+                "modality": "TEXT",
+                "tokenCount": 19
+              }
+            ]
+          },
+          "modelVersion": "gemini-3.1-flash-lite",
+          "createTime": "2026-09-28T07:52:39.943465Z",
+          "responseId": "xxy6aunKOdGj9LsPnKCUuAM"
+        }
+  recorded_at: Mon, 28 Sep 2026 07:52:41 GMT
+recorded_with: VCR 6.4.0

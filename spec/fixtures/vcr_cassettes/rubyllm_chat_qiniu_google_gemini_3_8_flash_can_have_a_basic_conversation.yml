@@ -1,0 +1,97 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: "<QINIU_BASE_URL>/bypass/vertex/v1/models/google/gemini-3.8-flash:generateContent"
+    body:
+      encoding: UTF-8
+      string: '{"contents":[{"role":"user","parts":[{"text":"What''s 2 + 2?"}]}],"generationConfig":{}}'
+    headers:
+      User-Agent:
+      - Faraday v2.14.4
+      Authorization:
+      - Bearer <AUTH_TOKEN>
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - ''
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, PATCH, DELETE, OPTIONS
+      Access-Control-Allow-Origin:
+      - ''
+      Access-Control-Expose-Headers:
+      - Http_x_reqid
+      Http-X-Reqid:
+      - chatptvtx-f03da7173a9c4b49834e875de90f2713
+      X-Request-Id:
+      - chatptvtx-f03da7173a9c4b49834e875de90f2713
+      Server:
+      - APISIX
+      Cache-Control:
+      - no-cache
+      Content-Length:
+      - '1217'
+      Connection:
+      - keep-alive
+      Date:
+      - Mon, 28 Sep 2026 07:54:39 GMT
+      Eo-Log-Uuid:
+      - '8836279185428092038'
+      Eo-Cache-Status:
+      - MISS
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "candidates": [
+            {
+              "content": {
+                "role": "model",
+                "parts": [
+                  {
+                    "text": "2 + 2 = 4",
+                    "thoughtSignature": "AY89a18T0u9wNvKX8s8pnUgBk3WDe3qnPOHa7KMvSz6AC8qIhh+6TN+P8zfOOxVIyExM+SE6a1HKPGkj5jQyE/d4hmI6wrp27vN8en4qQRMkZ6HdR5CUzIUlDaUrG/mGUkqDM9fPCOkIY6FCedEjqXShC/SV1YS+Xvrra/7oe0mgwMlNoBKg+R5xOB51GZvJTXAUqK6/rghN0ldBfNWncQX7bedL3WrqkkRtE8077U/Ny3ML0JY+G1Pn52rxNz1wIGEbYEWnaREOAkZzmSPIUkIMNznHgxsrLFU+tlb5KZBgqxfHiglJwAfuUOWsvgdNZHLuSnKqudz28a4UdVoYlhFhesW7aDbYFyWJaws7XSkgpE+sbeNd254l8JVirgFRIyy90yEE7DbxzVrZUam2VV7KJOUX9C2ENyXCILmloLZSsklez44SvJ994zR21wLxwpkNXcvJNJ9JHg=="
+                  }
+                ]
+              },
+              "finishReason": "STOP"
+            }
+          ],
+          "usageMetadata": {
+            "promptTokenCount": 9,
+            "candidatesTokenCount": 7,
+            "totalTokenCount": 102,
+            "trafficType": "ON_DEMAND",
+            "promptTokensDetails": [
+              {
+                "modality": "TEXT",
+                "tokenCount": 9
+              }
+            ],
+            "candidatesTokensDetails": [
+              {
+                "modality": "TEXT",
+                "tokenCount": 7
+              }
+            ],
+            "thoughtsTokenCount": 86
+          },
+          "modelVersion": "gemini-3.8-flash",
+          "createTime": "2026-09-28T07:54:39.816335Z",
+          "responseId": "Px26as_pMaiY4_UP_56EGA"
+        }
+  recorded_at: Mon, 28 Sep 2026 07:54:42 GMT
+recorded_with: VCR 6.4.0

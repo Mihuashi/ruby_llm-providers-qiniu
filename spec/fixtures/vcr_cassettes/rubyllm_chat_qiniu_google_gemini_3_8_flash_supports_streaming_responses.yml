@@ -1,0 +1,71 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: "<QINIU_BASE_URL>/bypass/vertex/v1/models/google/gemini-3.8-flash:streamGenerateContent?alt=sse"
+    body:
+      encoding: UTF-8
+      string: '{"contents":[{"role":"user","parts":[{"text":"Count from 1 to 3"}]}],"generationConfig":{}}'
+    headers:
+      User-Agent:
+      - Faraday v2.14.4
+      Authorization:
+      - Bearer <AUTH_TOKEN>
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/event-stream
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - ''
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, PATCH, DELETE, OPTIONS
+      Access-Control-Allow-Origin:
+      - ''
+      Access-Control-Expose-Headers:
+      - Http_x_reqid
+      Content-Disposition:
+      - attachment
+      Http-X-Reqid:
+      - chatptvtx-9dd12f95133a4928be16a600e02de91d
+      X-Request-Id:
+      - chatptvtx-9dd12f95133a4928be16a600e02de91d
+      Server:
+      - APISIX
+      Cache-Control:
+      - no-cache
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Date:
+      - Mon, 28 Sep 2026 07:50:40 GMT
+      Eo-Log-Uuid:
+      - '14544320406573213641'
+      Eo-Cache-Status:
+      - MISS
+    body:
+      encoding: UTF-8
+      string: "data: {\"candidates\": [{\"content\": {\"role\": \"model\",\"parts\":
+        [{\"text\": \"1, 2, 3\"}]}}],\"usageMetadata\": {\"trafficType\": \"ON_DEMAND\"},\"modelVersion\":
+        \"gemini-3.8-flash\",\"createTime\": \"2026-09-28T07:50:41.659437Z\",\"responseId\":
+        \"URy6au2fKI-epucP1f7t6AY\"}\r\n\r\ndata: {\"candidates\": [{\"content\":
+        {\"role\": \"model\",\"parts\": [{\"text\": \"\",\"thoughtSignature\": \"AY89a199dJH54nbhLQXK+JRKRICd7DM78XvfSkId30ycrqrX6OrX/EeQVlSmGzw3oS1hTmoxz8fhTU1isl18jCsP26k964pEscaptNYXkwqGyoGSZZFOAuppNiBQk1w5AcJa/1EQCmqhiPoEpkUxqwN5tO0BhFc7yN8+70xBXhsIuzKqEg1oVFRTEFSAuqpLyncLBDiB49QCuKh9ClVKFsemxZf8/UyiINIW8al6i5IeSPi0Snb9227WiaRq2DJEbTsV0XX0lJpF0IiT20xcJODrGikx4V5XO8bwKKRkmxalmCEr1WKN3JEZB/nEpSv2Eoup38eytfB2F6MTg1EuGQnDfnmVrytVaZgJXSpllqXUUe2vA6TE+TUpClTWNphJQ9xZnUnkFy4SudcVTQ921nsHiYXTV53CoblYANE7WUv5A9/KZYqNVODnyVt/OktOHGHaHGwpwJuhg0T1ZqKMLhlBGGNK3NiPrEvVfW8iZHUhdbyFtsyInxz6XEKDp8bUNBpRGleCw1t6ireQywT3j0Cb6vo6I49O/gTfHoBcicaFm+BUj8lhHw5ICBlMTZmrheNa0DVBw7OCer18D3zO1KApVVX21Jgj0Hki+dTrAnH3AQHnJDqMv8tqCflF548ARse6OpVuzNvtcmuCYWjNSRO1yhAHS8kY1piQ+Q2OJowJS5yh9LtwLEYSVw==\"}]},\"finishReason\":
+        \"STOP\"}],\"usageMetadata\": {\"promptTokenCount\": 7,\"candidatesTokenCount\":
+        7,\"totalTokenCount\": 121,\"trafficType\": \"ON_DEMAND\",\"promptTokensDetails\":
+        [{\"modality\": \"TEXT\",\"tokenCount\": 7}],\"candidatesTokensDetails\":
+        [{\"modality\": \"TEXT\",\"tokenCount\": 7}],\"thoughtsTokenCount\": 107},\"modelVersion\":
+        \"gemini-3.8-flash\",\"createTime\": \"2026-09-28T07:50:41.659437Z\",\"responseId\":
+        \"URy6au2fKI-epucP1f7t6AY\"}\r\n\r\n"
+  recorded_at: Mon, 28 Sep 2026 07:50:43 GMT
+recorded_with: VCR 6.4.0

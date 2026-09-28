@@ -1,0 +1,154 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: "<QINIU_BASE_URL>/bypass/anthropic/v1/messages"
+    body:
+      encoding: UTF-8
+      string: '{"model":"anthropic/claude-sonnet-5","messages":[{"role":"user","content":[{"type":"text","text":"Who
+        created the programming language Ruby?"}]}],"stream":false,"max_tokens":128000}'
+    headers:
+      User-Agent:
+      - Faraday v2.14.4
+      Authorization:
+      - Bearer <AUTH_TOKEN>
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - ''
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, PATCH, DELETE, OPTIONS
+      Access-Control-Allow-Origin:
+      - ''
+      Access-Control-Expose-Headers:
+      - Http_x_reqid
+      Http-X-Reqid:
+      - chatptmsg-8a71a5ce97aa4df5b6b4c81ed3ae16bc
+      X-Request-Id:
+      - chatptmsg-8a71a5ce97aa4df5b6b4c81ed3ae16bc
+      Server:
+      - APISIX
+      Cache-Control:
+      - no-cache
+      Content-Length:
+      - '1632'
+      Connection:
+      - keep-alive
+      Date:
+      - Mon, 28 Sep 2026 07:54:18 GMT
+      Eo-Log-Uuid:
+      - '18423766280816035556'
+      Eo-Cache-Status:
+      - MISS
+    body:
+      encoding: UTF-8
+      string: '{"model":"anthropic/claude-sonnet-5","id":"msg_bdrk_j7uhnxi5kd4khksu3oqiufl3jh7b4kvqnu6rpzhmcy2h2d6tjvfq","type":"message","role":"assistant","content":[{"type":"text","text":"Ruby
+        was created by **Yukihiro Matsumoto**, often known by his nickname **\"Matz.\"**
+        He is a Japanese computer scientist and software programmer.\n\nHere are some
+        key details about Ruby''s creation:\n\n* **When:** Matsumoto began working
+        on Ruby in **1993**, and it was first publicly released in **1995**.\n* **Goal:**
+        He wanted to create a language that was more powerful than Perl and more object-oriented
+        than Python. His main design philosophy was to prioritize **programmer happiness
+        and productivity**, aiming to make coding a natural, enjoyable, and intuitive
+        experience rather than just focusing on machine efficiency.\n* **Influences:**
+        Ruby was influenced by several other languages, including Perl, Smalltalk,
+        Eiffel, Ada, and Lisp.\n* **Name Origin:** The name \"Ruby\" was chosen (over
+        an initial alternative name, \"Coral\") because it is the birthstone for June,
+        and was suggested by one of Matsumoto''s colleagues.\n\nMatsumoto remains
+        highly involved in the language''s development today, and Ruby has grown to
+        become widely known, especially due to the popular **Ruby on Rails** web framework."}],"container":null,"stop_reason":"end_turn","stop_sequence":null,"stop_details":null,"usage":{"input_tokens":18,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"cache_creation":{"ephemeral_5m_input_tokens":0,"ephemeral_1h_input_tokens":0},"output_tokens":386,"output_tokens_details":{"thinking_tokens":0},"service_tier":"standard"}}'
+  recorded_at: Mon, 28 Sep 2026 07:54:24 GMT
+- request:
+    method: post
+    uri: "<QINIU_BASE_URL>/bypass/anthropic/v1/messages"
+    body:
+      encoding: UTF-8
+      string: '{"model":"anthropic/claude-sonnet-5","messages":[{"role":"user","content":[{"type":"text","text":"Who
+        created the programming language Ruby?"}]},{"role":"assistant","content":[{"type":"text","text":"Ruby
+        was created by **Yukihiro Matsumoto**, often known by his nickname **\"Matz.\"**
+        He is a Japanese computer scientist and software programmer.\n\nHere are some
+        key details about Ruby''s creation:\n\n* **When:** Matsumoto began working
+        on Ruby in **1993**, and it was first publicly released in **1995**.\n* **Goal:**
+        He wanted to create a language that was more powerful than Perl and more object-oriented
+        than Python. His main design philosophy was to prioritize **programmer happiness
+        and productivity**, aiming to make coding a natural, enjoyable, and intuitive
+        experience rather than just focusing on machine efficiency.\n* **Influences:**
+        Ruby was influenced by several other languages, including Perl, Smalltalk,
+        Eiffel, Ada, and Lisp.\n* **Name Origin:** The name \"Ruby\" was chosen (over
+        an initial alternative name, \"Coral\") because it is the birthstone for June,
+        and was suggested by one of Matsumoto''s colleagues.\n\nMatsumoto remains
+        highly involved in the language''s development today, and Ruby has grown to
+        become widely known, especially due to the popular **Ruby on Rails** web framework."}]},{"role":"user","content":[{"type":"text","text":"What
+        year was Ruby first released?"}]}],"stream":false,"max_tokens":128000}'
+    headers:
+      User-Agent:
+      - Faraday v2.14.4
+      Authorization:
+      - Bearer <AUTH_TOKEN>
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - ''
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, PATCH, DELETE, OPTIONS
+      Access-Control-Allow-Origin:
+      - ''
+      Access-Control-Expose-Headers:
+      - Http_x_reqid
+      Http-X-Reqid:
+      - chatptmsg-4f60ff06c9c3448cb49ecb2003cc5661
+      X-Request-Id:
+      - chatptmsg-4f60ff06c9c3448cb49ecb2003cc5661
+      Server:
+      - APISIX
+      Cache-Control:
+      - no-cache
+      Content-Length:
+      - '1543'
+      Connection:
+      - keep-alive
+      Date:
+      - Mon, 28 Sep 2026 07:54:24 GMT
+      Eo-Log-Uuid:
+      - '4123777483562112421'
+      Eo-Cache-Status:
+      - MISS
+    body:
+      encoding: UTF-8
+      string: '{"model":"anthropic/claude-sonnet-5","id":"msg_bdrk_fwveo7mbisd53w6ndp4muieoxzhsmn5je4mf3v2zeoewheqkuqnq","type":"message","role":"assistant","content":[{"type":"thinking","thinking":"","signature":"EoQCCnkIEhABGAIqQK/NK6waJHRE+PHGKzmWGc/bB0lvprSAIxVNni0bz5R0IiAQ9yAJ8q/TnLXsiXSw//lQs38oAVb93xqDeUTmE0kyDmNsYXVkZS1zYWZmcm9uOABCCHRoaW5raW5nWgw5OTIzODI1ODI0NDGoAbO66NUGEgxayZb5TIT6di6PSHAaDFvXLox2mDcZcH2jFyIwMf3KbSbUbTHDdM/NRnAd8X27wEBLS1cX7l1vmthBMAkhyYQUBpqtwVfTOURFajJ9Kjm8qFzwRNjw41SSFzUWeWiVBbcfb4lIfukDbiwhCGWDNu1QEjahxYU1b/Ko3BgTjV65O6ASzWWObuIYAQ=="},{"type":"text","text":"Ruby
+        was first released to the public in **December 1995**.\n\nHere''s a bit more
+        context on its timeline:\n\n* **Development Start:** Yukihiro Matsumoto began
+        designing and working on the language in **February 1993**.\n* **Public Release:**
+        The first public version was released in Japan in December 1995.\n* **Global
+        Spread:** Ruby remained relatively unknown outside of Japan for several years
+        due to the lack of English documentation. It began gaining significant international
+        popularity in the early 2000s, and its growth accelerated dramatically after
+        the release of the **Ruby on Rails** framework in 2004."}],"container":null,"stop_reason":"end_turn","stop_sequence":null,"stop_details":null,"usage":{"input_tokens":416,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"cache_creation":{"ephemeral_5m_input_tokens":0,"ephemeral_1h_input_tokens":0},"output_tokens":206,"output_tokens_details":{"thinking_tokens":15},"service_tier":"standard"}}'
+  recorded_at: Mon, 28 Sep 2026 07:54:29 GMT
+recorded_with: VCR 6.4.0

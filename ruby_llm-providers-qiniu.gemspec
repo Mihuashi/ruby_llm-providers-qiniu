@@ -3,11 +3,11 @@
 Gem::Specification.new do |spec|
   spec.name = 'ruby_llm-providers-qiniu'
   spec.version = '0.1.0'
-  spec.authors = ['Mihuashi']
-  spec.email = ['maintainers@example.com']
+  spec.authors = ['OuYangJinTing']
+  spec.email = ['ou.yang.jin.ting.x@gmail.com']
 
-  spec.summary = 'RubyLLM provider for Qiniu.'
-  spec.description = 'Adds Qiniu provider support to RubyLLM.'
+  spec.summary = 'RubyLLM provider for Qiniu (Modelink).'
+  spec.description = 'Adds Qiniu (Modelink) provider support to RubyLLM.'
   spec.homepage = 'https://github.com/Mihuashi/ruby_llm-providers-qiniu'
   spec.license = 'MIT'
   spec.required_ruby_version = '>= 3.1'

@@ -1,0 +1,96 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: "<QINIU_BASE_URL>/bypass/vertex/v1/models/google/gemini-3.1-flash-lite:generateContent"
+    body:
+      encoding: UTF-8
+      string: '{"contents":[{"role":"user","parts":[{"text":"What''s 2 + 2?"}]}],"generationConfig":{}}'
+    headers:
+      User-Agent:
+      - Faraday v2.14.4
+      Authorization:
+      - Bearer <AUTH_TOKEN>
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - ''
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, PATCH, DELETE, OPTIONS
+      Access-Control-Allow-Origin:
+      - ''
+      Access-Control-Expose-Headers:
+      - Http_x_reqid
+      Http-X-Reqid:
+      - chatptvtx-9c63456f43234c8197fac1cb3359aeae
+      X-Request-Id:
+      - chatptvtx-9c63456f43234c8197fac1cb3359aeae
+      Server:
+      - APISIX
+      Cache-Control:
+      - no-cache
+      Content-Length:
+      - '850'
+      Connection:
+      - keep-alive
+      Date:
+      - Mon, 28 Sep 2026 07:54:29 GMT
+      Eo-Log-Uuid:
+      - '5370398606444757460'
+      Eo-Cache-Status:
+      - MISS
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "candidates": [
+            {
+              "content": {
+                "role": "model",
+                "parts": [
+                  {
+                    "text": "2 + 2 is 4.",
+                    "thoughtSignature": "AY89a1/FEzctevOq3hoikXa46XAD1+W6cygK7uStqQ6EPhhwA7cmzsI9beUFWtlFlm7zqosUPUE1nAE2t8XPGzRNPnpcdqpTtOE0TTyzoRc1hoPIBiG4cqbB"
+                  }
+                ]
+              },
+              "finishReason": "STOP"
+            }
+          ],
+          "usageMetadata": {
+            "promptTokenCount": 9,
+            "candidatesTokenCount": 8,
+            "totalTokenCount": 17,
+            "trafficType": "ON_DEMAND",
+            "promptTokensDetails": [
+              {
+                "modality": "TEXT",
+                "tokenCount": 9
+              }
+            ],
+            "candidatesTokensDetails": [
+              {
+                "modality": "TEXT",
+                "tokenCount": 8
+              }
+            ]
+          },
+          "modelVersion": "gemini-3.1-flash-lite",
+          "createTime": "2026-09-28T07:54:30.886595Z",
+          "responseId": "Nh26asOONr6bpucPwvej0Ac"
+        }
+  recorded_at: Mon, 28 Sep 2026 07:54:31 GMT
+recorded_with: VCR 6.4.0

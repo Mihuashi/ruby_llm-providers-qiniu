@@ -1,0 +1,119 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: "<QINIU_BASE_URL>/v1/chat/completions"
+    body:
+      encoding: UTF-8
+      string: '{"model":"deepseek/deepseek-v4.1-flash","messages":[{"role":"user","content":"What''s
+        the weather in Berlin? Use 52.5200, 13.4050."}],"stream":false,"tools":[{"type":"function","function":{"name":"weather","description":"Gets
+        current weather for a location","parameters":{"type":"object","properties":{"latitude":{"type":"string","description":"Latitude"},"longitude":{"type":"string","description":"Longitude"}},"required":["latitude","longitude"],"additionalProperties":false,"strict":true}}}]}'
+    headers:
+      User-Agent:
+      - Faraday v2.14.4
+      Authorization:
+      - Bearer <AUTH_TOKEN>
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - ''
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, PATCH, DELETE, OPTIONS
+      Access-Control-Allow-Origin:
+      - ''
+      Access-Control-Expose-Headers:
+      - Http_x_reqid
+      Http-X-Reqid:
+      - chatcmpl-ac69ea0edf4742eba008ea5cf53d8e0f
+      Server:
+      - APISIX
+      Content-Length:
+      - '728'
+      Connection:
+      - keep-alive
+      Date:
+      - Mon, 28 Sep 2026 08:15:30 GMT
+      Eo-Log-Uuid:
+      - '44681797609371094'
+      Eo-Cache-Status:
+      - MISS
+    body:
+      encoding: UTF-8
+      string: '{"id":"chatcmpl-ac69ea0edf4742eba008ea5cf53d8e0f","object":"chat.completion","created":1790583330,"model":"deepseek/deepseek-v4.1-flash","choices":[{"index":0,"message":{"role":"assistant","content":"I''ll
+        check the current weather in Berlin for you.","tool_calls":[{"index":0,"type":"function","id":"call_00_lvuhgau5olak8ey3lt97bhez","function":{"name":"weather","arguments":"{\"latitude\":
+        \"52.5200\", \"longitude\": \"13.4050\"}"}}],"reasoning_content":"The user
+        wants weather in Berlin. Let me call the weather tool with those coordinates."},"finish_reason":"tool_calls"}],"usage":{"prompt_tokens":341,"completion_tokens":87,"total_tokens":428,"prompt_tokens_details":{},"completion_tokens_details":{"reasoning_tokens":17}}}'
+  recorded_at: Mon, 28 Sep 2026 08:15:34 GMT
+- request:
+    method: post
+    uri: "<QINIU_BASE_URL>/v1/chat/completions"
+    body:
+      encoding: UTF-8
+      string: '{"model":"deepseek/deepseek-v4.1-flash","messages":[{"role":"user","content":"What''s
+        the weather in Berlin? Use 52.5200, 13.4050."},{"role":"assistant","content":"I''ll
+        check the current weather in Berlin for you.","tool_calls":[{"id":"call_00_lvuhgau5olak8ey3lt97bhez","type":"function","function":{"name":"weather","arguments":"{\"latitude\":\"52.5200\",\"longitude\":\"13.4050\"}"}}],"reasoning":"The
+        user wants weather in Berlin. Let me call the weather tool with those coordinates.","reasoning_content":"The
+        user wants weather in Berlin. Let me call the weather tool with those coordinates."},{"role":"tool","content":"Current
+        weather at 52.5200, 13.4050: 15°C, Wind: 10 km/h","tool_call_id":"call_00_lvuhgau5olak8ey3lt97bhez"}],"stream":false,"tools":[{"type":"function","function":{"name":"weather","description":"Gets
+        current weather for a location","parameters":{"type":"object","properties":{"latitude":{"type":"string","description":"Latitude"},"longitude":{"type":"string","description":"Longitude"}},"required":["latitude","longitude"],"additionalProperties":false,"strict":true}}}]}'
+    headers:
+      User-Agent:
+      - Faraday v2.14.4
+      Authorization:
+      - Bearer <AUTH_TOKEN>
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - ''
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, PATCH, DELETE, OPTIONS
+      Access-Control-Allow-Origin:
+      - ''
+      Access-Control-Expose-Headers:
+      - Http_x_reqid
+      Http-X-Reqid:
+      - chatcmpl-366f9e7ce35e4a3e863fb565a1551eaa
+      Server:
+      - APISIX
+      Content-Length:
+      - '898'
+      Connection:
+      - keep-alive
+      Date:
+      - Mon, 28 Sep 2026 08:15:34 GMT
+      Eo-Log-Uuid:
+      - '18006083621634436192'
+      Eo-Cache-Status:
+      - MISS
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJpZCI6ImNoYXRjbXBsLTM2NmY5ZTdjZTM1ZTRhM2U4NjNmYjU2NWExNTUxZWFhIiwib2JqZWN0IjoiY2hhdC5jb21wbGV0aW9uIiwiY3JlYXRlZCI6MTc5MDU4MzMzNCwibW9kZWwiOiJkZWVwc2Vlay9kZWVwc2Vlay12NC4xLWZsYXNoIiwiY2hvaWNlcyI6W3siaW5kZXgiOjAsIm1lc3NhZ2UiOnsicm9sZSI6ImFzc2lzdGFudCIsImNvbnRlbnQiOiJIZXJlJ3MgdGhlIGN1cnJlbnQgd2VhdGhlciBpbiBCZXJsaW4gKDUyLjUyMDAsIDEzLjQwNTApOlxuXG4tICoqVGVtcGVyYXR1cmU6KiogMTXCsEMgKDU5wrBGKVxuLSAqKldpbmQ6KiogMTAga20vaFxuXG5JdCdzIGEgZmFpcmx5IG1pbGQgZGF5IGluIEJlcmxpbiDigJQgMTXCsEMgaXMgY29tZm9ydGFibGUgd2VhdGhlci4gWW91IG1pZ2h0IHdhbnQgYSBsaWdodCBqYWNrZXQsIGVzcGVjaWFsbHkgc2luY2UgdGhlcmUncyBhIGdlbnRsZSBicmVlemUgYXQgMTAga20vaC4gTm90ZSB0aGF0IHRoZSByZXBvcnQgZG9lc24ndCBpbmNsdWRlIGNvbmRpdGlvbnMgbGlrZSBjbG91ZCBjb3ZlciBvciBwcmVjaXBpdGF0aW9uLCBzbyBpZiB5b3UncmUgaGVhZGluZyBvdXQsIGl0IG1heSBiZSB3b3J0aCBkb3VibGUtY2hlY2tpbmcgZm9yIHJhaW4gc2VwYXJhdGVseS4iLCJyZWFzb25pbmdfY29udGVudCI6IlRoZSB0b29sIHJldHVybmVkIHJlc3VsdHMuIExldCBtZSBwcmVzZW50IHRoZW0uIn0sImZpbmlzaF9yZWFzb24iOiJzdG9wIn1dLCJ1c2FnZSI6eyJwcm9tcHRfdG9rZW5zIjo0NjYsImNvbXBsZXRpb25fdG9rZW5zIjoxMjEsInRvdGFsX3Rva2VucyI6NTg3LCJwcm9tcHRfdG9rZW5zX2RldGFpbHMiOnsiY2FjaGVkX3Rva2VucyI6MjU2fSwiY29tcGxldGlvbl90b2tlbnNfZGV0YWlscyI6eyJyZWFzb25pbmdfdG9rZW5zIjoxMH19fQ==
+  recorded_at: Mon, 28 Sep 2026 08:15:36 GMT
+recorded_with: VCR 6.4.0
