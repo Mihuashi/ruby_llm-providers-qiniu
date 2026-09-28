@@ -5,6 +5,7 @@
 PROVIDER = :qiniu
 CHAT_MODELS = [
   { provider: PROVIDER, model: 'anthropic/claude-sonnet-5' },
+  { provider: PROVIDER, model: 'gemini-3.1-flash-lite-preview' },
   { provider: PROVIDER, model: 'google/gemini-3.1-flash-lite' },
   { provider: PROVIDER, model: 'google/gemini-3.8-flash' },
   { provider: PROVIDER, model: 'openai/gpt-5.2' },

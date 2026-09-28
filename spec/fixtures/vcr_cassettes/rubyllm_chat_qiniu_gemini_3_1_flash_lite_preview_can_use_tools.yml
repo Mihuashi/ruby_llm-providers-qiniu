@@ -1,0 +1,165 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: "<QINIU_BASE_URL>/bypass/vertex/v1/models/gemini-3.1-flash-lite-preview:generateContent"
+    body:
+      encoding: UTF-8
+      string: '{"contents":[{"role":"user","parts":[{"text":"What''s the weather in
+        Berlin? Use 52.5200, 13.4050."}]}],"generationConfig":{},"tools":[{"functionDeclarations":[{"name":"weather","description":"Gets
+        current weather for a location","parametersJsonSchema":{"type":"object","properties":{"latitude":{"type":"string","description":"Latitude"},"longitude":{"type":"string","description":"Longitude"}},"required":["latitude","longitude"],"additionalProperties":false,"strict":true}}]}]}'
+    headers:
+      User-Agent:
+      - Faraday v2.14.4
+      Authorization:
+      - Bearer <AUTH_TOKEN>
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - ''
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, PATCH, DELETE, OPTIONS
+      Access-Control-Allow-Origin:
+      - ''
+      Access-Control-Expose-Headers:
+      - Http_x_reqid
+      Http-X-Reqid:
+      - chatptvtx-ae52969c243f4d609a9eba1fdb972774
+      X-Request-Id:
+      - chatptvtx-ae52969c243f4d609a9eba1fdb972774
+      Server:
+      - APISIX
+      Cache-Control:
+      - no-cache
+      Content-Length:
+      - '1050'
+      Connection:
+      - keep-alive
+      Date:
+      - Mon, 28 Sep 2026 09:11:58 GMT
+      Eo-Log-Uuid:
+      - '4694288386634238176'
+      Eo-Cache-Status:
+      - MISS
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "candidates": [
+            {
+              "content": {
+                "role": "model",
+                "parts": [
+                  {
+                    "functionCall": {
+                      "name": "weather",
+                      "args": {
+                        "longitude": "13.4050",
+                        "latitude": "52.5200"
+                      },
+                      "id": "call_577611"
+                    },
+                    "thoughtSignature": "AY89a197Xd65OAHamTif1HQHpVU3gX2Gz2F9YhFHjRahuOfZCmc8anews/jnlaqZaIN0U3uUu/OmjTcul+GnWooCd5MpUu0Bpd4yx9Pb4XTFu6xr5/aEoITS"
+                  }
+                ]
+              },
+              "finishReason": "STOP"
+            }
+          ],
+          "usageMetadata": {
+            "promptTokenCount": 56,
+            "candidatesTokenCount": 32,
+            "totalTokenCount": 88,
+            "trafficType": "ON_DEMAND",
+            "promptTokensDetails": [
+              {
+                "modality": "TEXT",
+                "tokenCount": 56
+              }
+            ],
+            "candidatesTokensDetails": [
+              {
+                "modality": "TEXT",
+                "tokenCount": 32
+              }
+            ]
+          },
+          "modelVersion": "gemini-3.1-flash-lite",
+          "createTime": "2026-09-28T09:11:59.426563Z",
+          "responseId": "Xy-6asOEGq7K998PlMiwkAE"
+        }
+  recorded_at: Mon, 28 Sep 2026 09:12:02 GMT
+- request:
+    method: post
+    uri: "<QINIU_BASE_URL>/bypass/vertex/v1/models/gemini-3.1-flash-lite-preview:generateContent"
+    body:
+      encoding: UTF-8
+      string: '{"contents":[{"role":"user","parts":[{"text":"What''s the weather in
+        Berlin? Use 52.5200, 13.4050."}]},{"role":"model","parts":[{"functionCall":{"name":"weather","args":{"longitude":"13.4050","latitude":"52.5200"}},"thoughtSignature":"AY89a197Xd65OAHamTif1HQHpVU3gX2Gz2F9YhFHjRahuOfZCmc8anews/jnlaqZaIN0U3uUu/OmjTcul+GnWooCd5MpUu0Bpd4yx9Pb4XTFu6xr5/aEoITS"}]},{"role":"user","parts":[{"functionResponse":{"name":"weather","response":{"name":"weather","content":[{"text":"Current
+        weather at 52.5200, 13.4050: 15°C, Wind: 10 km/h"}]}}}]}],"generationConfig":{},"tools":[{"functionDeclarations":[{"name":"weather","description":"Gets
+        current weather for a location","parametersJsonSchema":{"type":"object","properties":{"latitude":{"type":"string","description":"Latitude"},"longitude":{"type":"string","description":"Longitude"}},"required":["latitude","longitude"],"additionalProperties":false,"strict":true}}]}]}'
+    headers:
+      User-Agent:
+      - Faraday v2.14.4
+      Authorization:
+      - Bearer <AUTH_TOKEN>
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - ''
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, PATCH, DELETE, OPTIONS
+      Access-Control-Allow-Origin:
+      - ''
+      Access-Control-Expose-Headers:
+      - Http_x_reqid
+      Http-X-Reqid:
+      - chatptvtx-4642cae6c1e44ef9ae435544a00247b8
+      X-Request-Id:
+      - chatptvtx-4642cae6c1e44ef9ae435544a00247b8
+      Server:
+      - APISIX
+      Cache-Control:
+      - no-cache
+      Content-Length:
+      - '914'
+      Connection:
+      - keep-alive
+      Date:
+      - Mon, 28 Sep 2026 09:12:02 GMT
+      Eo-Log-Uuid:
+      - '8518334152276595426'
+      Eo-Cache-Status:
+      - MISS
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        ewogICJjYW5kaWRhdGVzIjogWwogICAgewogICAgICAiY29udGVudCI6IHsKICAgICAgICAicm9sZSI6ICJtb2RlbCIsCiAgICAgICAgInBhcnRzIjogWwogICAgICAgICAgewogICAgICAgICAgICAidGV4dCI6ICJUaGUgY3VycmVudCB3ZWF0aGVyIGluIEJlcmxpbiBpcyAxNcKwQyB3aXRoIGEgd2luZCBzcGVlZCBvZiAxMCBrbS9oLiIsCiAgICAgICAgICAgICJ0aG91Z2h0U2lnbmF0dXJlIjogIkFZODlhMStYczZVNm1SMGFPNTY4MmJmVmgxTXJDQnNvZnMzYUpuOHp0bklOY3MxUmNuSldLbDlvWjR1ckZRbCtCbGhzK2ViYUthd2w5YWtJVnRVZDFUUHRBaGVuUWtLK1huTzAzR2dIWWJvMEpkTEFFMHVkbUc3QiIKICAgICAgICAgIH0KICAgICAgICBdCiAgICAgIH0sCiAgICAgICJmaW5pc2hSZWFzb24iOiAiU1RPUCIKICAgIH0KICBdLAogICJ1c2FnZU1ldGFkYXRhIjogewogICAgInByb21wdFRva2VuQ291bnQiOiAxMjEsCiAgICAiY2FuZGlkYXRlc1Rva2VuQ291bnQiOiAyMywKICAgICJ0b3RhbFRva2VuQ291bnQiOiAxNDQsCiAgICAidHJhZmZpY1R5cGUiOiAiT05fREVNQU5EIiwKICAgICJwcm9tcHRUb2tlbnNEZXRhaWxzIjogWwogICAgICB7CiAgICAgICAgIm1vZGFsaXR5IjogIlRFWFQiLAogICAgICAgICJ0b2tlbkNvdW50IjogMTIxCiAgICAgIH0KICAgIF0sCiAgICAiY2FuZGlkYXRlc1Rva2Vuc0RldGFpbHMiOiBbCiAgICAgIHsKICAgICAgICAibW9kYWxpdHkiOiAiVEVYVCIsCiAgICAgICAgInRva2VuQ291bnQiOiAyMwogICAgICB9CiAgICBdCiAgfSwKICAibW9kZWxWZXJzaW9uIjogImdlbWluaS0zLjEtZmxhc2gtbGl0ZSIsCiAgImNyZWF0ZVRpbWUiOiAiMjAyNi0wOS0yOFQwOToxMjowMy4wMzY1NjFaIiwKICAicmVzcG9uc2VJZCI6ICJZeS02YXRHZEFzV0ZwdWNQcGJyZm1BZyIKfQo=
+  recorded_at: Mon, 28 Sep 2026 09:12:03 GMT
+recorded_with: VCR 6.4.0

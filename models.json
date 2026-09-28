@@ -77,6 +77,95 @@
     }
   },
   {
+    "id": "gemini-3.1-flash-lite-preview",
+    "name": "Gemini 3.1 Flash Lite Preview",
+    "provider": "qiniu",
+    "family": "gemini-flash-lite",
+    "created_at": "2026-03-03 00:00:00 UTC",
+    "context_window": 1048576,
+    "max_output_tokens": 65536,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text",
+        "image",
+        "video",
+        "audio",
+        "pdf"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "function_calling",
+      "structured_output",
+      "reasoning",
+      "vision",
+      "video",
+      "tool_choice",
+      "transcription",
+      "batch",
+      "caching"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 0.25,
+          "output_per_million": 1.5,
+          "cache_read_input_per_million": 0.025
+        }
+      },
+      "audio_tokens": {
+        "standard": {
+          "input_per_million": 0.5
+        }
+      }
+    },
+    "metadata": {
+      "version": "3.1-flash-lite-preview-03-2026",
+      "description": "Gemini 3.1 Flash Lite Preview",
+      "supported_generation_methods": [
+        "generateContent",
+        "countTokens",
+        "createCachedContent",
+        "batchGenerateContent"
+      ],
+      "source": "models.dev",
+      "provider_id": "google",
+      "open_weights": false,
+      "attachment": true,
+      "temperature": true,
+      "last_updated": "2026-03-03",
+      "status": "deprecated",
+      "tool_call": true,
+      "structured_output": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "minimal",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "cost": {
+        "input": 0.25,
+        "output": 1.5,
+        "cache_read": 0.025,
+        "input_audio": 0.5
+      },
+      "limit": {
+        "context": 1048576,
+        "output": 65536
+      },
+      "knowledge": "2025-01"
+    }
+  },
+  {
     "id": "google/gemini-3.1-flash-lite",
     "name": "Gemini 3.1 Flash Lite",
     "provider": "qiniu",
