@@ -6,7 +6,7 @@ VCR.configure do |config|
   config.default_cassette_options = { record: ENV['CI'] ? :none : :once }
   config.allow_http_connections_when_no_cassette = true
   config.filter_sensitive_data('<QINIU_API_KEY>') { ENV.fetch('QINIU_API_KEY', nil) }
-  config.filter_sensitive_data('<QINIU_BASE_URL>') { ENV.fetch('QINIU_BASE_URL', nil) }
+  config.filter_sensitive_data('<QINIU_BASE_URL>') { ENV.fetch('QINIU_BASE_URL', 'https://api.qnaigc.com') }
 
   config.before_record do |interaction|
     next unless interaction.request.headers['Authorization']
