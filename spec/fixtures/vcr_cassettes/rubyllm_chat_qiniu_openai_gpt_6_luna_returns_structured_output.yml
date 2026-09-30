@@ -1,0 +1,221 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: "<QINIU_BASE_URL>/bypass/openai/v1/responses"
+    body:
+      encoding: UTF-8
+      string: '{"model":"openai/gpt-6-luna","input":[{"role":"user","content":"Generate
+        a person named John who is 30 years old"}],"stream":false,"store":false,"include":["reasoning.encrypted_content"],"text":{"format":{"type":"json_schema","name":"response","schema":{"type":"object","properties":{"name":{"type":"string"},"age":{"type":"integer"}},"required":["name","age"],"additionalProperties":false},"strict":true}}}'
+    headers:
+      User-Agent:
+      - Faraday v2.14.4
+      Authorization:
+      - Bearer <AUTH_TOKEN>
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - ''
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, PATCH, DELETE, OPTIONS
+      Access-Control-Allow-Origin:
+      - ''
+      Access-Control-Expose-Headers:
+      - Http_x_reqid
+      Http-X-Reqid:
+      - chatptrsp-55d0e3e883354184bfe9cdf7428e4006
+      X-Ratelimit-Abusepenalty-Active:
+      - 'False'
+      X-Ratelimit-Key:
+      - gpt-6-luna
+      X-Ratelimit-Limit-Requests:
+      - '7000'
+      X-Ratelimit-Limit-Tokens:
+      - '7000000'
+      X-Ratelimit-Remaining-Requests:
+      - '6999'
+      X-Ratelimit-Remaining-Tokens:
+      - '6999988'
+      X-Ratelimit-Renewalperiod-Requests:
+      - '60'
+      X-Ratelimit-Renewalperiod-Tokens:
+      - '60'
+      X-Ratelimit-Reset-Requests:
+      - '0'
+      X-Ratelimit-Reset-Tokens:
+      - '0'
+      X-Request-Id:
+      - c1729d11-7c16-4b43-9ecf-4a5e2b6796fa
+      Server:
+      - APISIX
+      Cache-Control:
+      - no-cache
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Date:
+      - Wed, 30 Sep 2026 04:43:52 GMT
+      Eo-Log-Uuid:
+      - '5843923290489769509'
+      Eo-Cache-Status:
+      - MISS
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "id": "resp_00b1067ae4903c98016abc9389338c81938bc7c03a7c6475fa",
+          "object": "response",
+          "created_at": 1790743433,
+          "status": "completed",
+          "background": false,
+          "completed_at": 1790743434,
+          "content_filters": [
+            {
+              "blocked": false,
+              "source_type": "prompt",
+              "content_filter_raw": [],
+              "content_filter_results": {},
+              "content_filter_offsets": {
+                "start_offset": 0,
+                "end_offset": 967,
+                "check_offset": 0
+              }
+            },
+            {
+              "blocked": false,
+              "source_type": "completion",
+              "content_filter_raw": [],
+              "content_filter_results": {},
+              "content_filter_offsets": {
+                "start_offset": 0,
+                "end_offset": 134,
+                "check_offset": 0
+              }
+            }
+          ],
+          "error": null,
+          "frequency_penalty": 0.0,
+          "incomplete_details": null,
+          "instructions": null,
+          "max_output_tokens": null,
+          "max_tool_calls": null,
+          "model": "openai/gpt-6-luna",
+          "moderation": null,
+          "output": [
+            {
+              "id": "rs_00b1067ae4903c98016abc9389d43881938b44f0ebc1829e41",
+              "type": "reasoning",
+              "content": [],
+              "encrypted_content": "gAAAAABqvJOKxZyOVX583tGqBVB64WUpf_UnWRkhsqpOLqOnbL8jS0269cbFW8xLCjIjpJpggulY1BLNfiFSELdoxb1o2Rm-Qxe4nP0tNF-pKRY-QmHEw6ewzJ24wzSXcyMnkGvMXcMHztXs4w75RS4PU3Lr7ZoMXJYj0U7HB-4fGItkbdRnWAumGDuKw0FaPeg7a0K9U6NtOnV7qc9LuvnsFmrp4kPtVa2EF37-o3Q3ZFh4ai1Z2pvJE4xUlv6dPTxRBalRvDrojJKsuPMR45TjNXn2h8L8du-QKHeizg_SbYEpL6PRA0qx9t739Ps2ejCCboaCgfeSLcluzU_ZtWX6ufkBrDgWQdHClPALsxA0Sy-xs3WY0s16JEVcQeFHAjSOLOlQtP8ilwT2sGCtKExlpCA8MIH9ccJmhEnPih3CV310lQmLj1NsbM5JO5cafsZVGnq_oV6j0chqmRy1EQgR1uXdwWXbZzLcx1suXiwPadOGGPEDHADpjoVpIUhoxWmTWmXL7MQvTwi0yq8Zs_Ckc5EgNXjP8nKpGSe4c7nUUi-OtCsLTEGj0GvvyXXn-I771SC74ga2OLwQcC3vIArCkOVD4VXNLEWWqpZwgNs474EpvcAS36knJsrpMFrouAOGFzJB0shqhXBJr9mdG9NTF7vUL37x9cnCvbEbNXPqCWIyyrBM_2xcyRVDBeb3g3ikXn_ngiGwrhGceofzpsm_Rq_9kJrR7nb0c6itUKkkWLoC-9ZIZG9kB9FyIXp--ngfI2ciN_0t0nheFtfNClCOmtR7X9S0AEJAKRDkSGdbxi6hbJn408j-oIaiR8vyqoJxB4oiTjlEphF17v_RMfzxpdQHflv73uEF46GbYmT1cMk6ChtAGbHYNSga4PRD0MAp2qGn60TN901fe7R2lmEKXIpCZ5PDy_Vx_7USiLs2qgSwvdllZDl-1niLFKsJiJvOSSd1NLDfgAqHifBSmUlvxVK2o9XIYu5CW4JYHeVkE4NcPjXvvnsuDrxIBT_XwACvfYL7pNcLE3wJ18UNP9XUEBWBxP-5FX-MOsrpmDUbvBXA9KiXzkf3gaeI-I0hvgsxR9lPWfm22c9q-OD9LCqF6l8tnk7qEjADMp2QRWi2mMXwhDr2H42eNoLe4PF8lq5DdirOsyR0CaVCjU7LFz2u1UDplfp5YRhGYcm18TRe-CetJ7UigcYsu_eWBqX6mWJof5qA0OAvcBcmqNSRfg0r_8QThovLa8TUAb9qD940fhXK6-4EYnU=",
+              "summary": []
+            },
+            {
+              "id": "msg_00b1067ae4903c98016abc938a01688193a57273ce1b052ccc",
+              "type": "message",
+              "status": "completed",
+              "content": [
+                {
+                  "type": "output_text",
+                  "annotations": [],
+                  "logprobs": [],
+                  "text": "{\"name\":\"John\",\"age\":30}"
+                }
+              ],
+              "phase": "final_answer",
+              "role": "assistant"
+            }
+          ],
+          "parallel_tool_calls": true,
+          "presence_penalty": 0.0,
+          "previous_response_id": null,
+          "prompt_cache_key": null,
+          "prompt_cache_retention": "24h",
+          "reasoning": {
+            "context": "all_turns",
+            "effort": "medium",
+            "mode": "standard",
+            "summary": null
+          },
+          "safety_identifier": null,
+          "service_tier": "default",
+          "store": false,
+          "temperature": 1.0,
+          "text": {
+            "format": {
+              "type": "json_schema",
+              "description": null,
+              "name": "response",
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "age": {
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "name",
+                  "age"
+                ],
+                "additionalProperties": false
+              },
+              "strict": true
+            },
+            "verbosity": "medium"
+          },
+          "tool_choice": "auto",
+          "tool_usage": {
+            "image_gen": {
+              "input_tokens": 0,
+              "input_tokens_details": {
+                "image_tokens": 0,
+                "text_tokens": 0
+              },
+              "output_tokens": 0,
+              "output_tokens_details": {
+                "image_tokens": 0,
+                "text_tokens": 0
+              },
+              "total_tokens": 0
+            },
+            "web_search": {
+              "num_requests": 0
+            }
+          },
+          "tools": [],
+          "top_logprobs": 0,
+          "top_p": 0.98,
+          "truncation": "disabled",
+          "usage": {
+            "input_tokens": 45,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 0
+            },
+            "output_tokens": 42,
+            "output_tokens_details": {
+              "reasoning_tokens": 24
+            },
+            "total_tokens": 87
+          },
+          "user": null,
+          "metadata": {}
+        }
+  recorded_at: Wed, 30 Sep 2026 04:43:54 GMT
+recorded_with: VCR 6.4.0

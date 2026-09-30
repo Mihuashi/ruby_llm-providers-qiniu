@@ -1,0 +1,202 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: "<QINIU_BASE_URL>/bypass/openai/v1/responses"
+    body:
+      encoding: UTF-8
+      string: '{"model":"openai/gpt-6-luna","input":[{"role":"user","content":"What
+        is the capital of France?"}],"stream":false,"store":false,"include":["reasoning.encrypted_content"]}'
+    headers:
+      User-Agent:
+      - Faraday v2.14.4
+      Authorization:
+      - Bearer <AUTH_TOKEN>
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - ''
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, PATCH, DELETE, OPTIONS
+      Access-Control-Allow-Origin:
+      - ''
+      Access-Control-Expose-Headers:
+      - Http_x_reqid
+      Http-X-Reqid:
+      - chatptrsp-001490a2645641ae84a615bd29e4b584
+      X-Ratelimit-Abusepenalty-Active:
+      - 'False'
+      X-Ratelimit-Key:
+      - gpt-6-luna
+      X-Ratelimit-Limit-Requests:
+      - '15000'
+      X-Ratelimit-Limit-Tokens:
+      - '15000000'
+      X-Ratelimit-Remaining-Requests:
+      - '14999'
+      X-Ratelimit-Remaining-Tokens:
+      - '14999993'
+      X-Ratelimit-Renewalperiod-Requests:
+      - '60'
+      X-Ratelimit-Renewalperiod-Tokens:
+      - '60'
+      X-Ratelimit-Reset-Requests:
+      - '0'
+      X-Ratelimit-Reset-Tokens:
+      - '0'
+      X-Request-Id:
+      - 6fa56ecc-1a15-4c7a-8242-d5292e0a4567
+      Server:
+      - APISIX
+      Cache-Control:
+      - no-cache
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Date:
+      - Wed, 30 Sep 2026 04:44:01 GMT
+      Eo-Log-Uuid:
+      - '17563679879196998123'
+      Eo-Cache-Status:
+      - MISS
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "id": "resp_0a54fb5d7b0b43cf016abc939231fc819580259650f1fb6026",
+          "object": "response",
+          "created_at": 1790743442,
+          "status": "completed",
+          "background": false,
+          "completed_at": 1790743445,
+          "content_filters": [
+            {
+              "blocked": false,
+              "source_type": "prompt",
+              "content_filter_raw": [],
+              "content_filter_results": {},
+              "content_filter_offsets": {
+                "start_offset": 0,
+                "end_offset": 808,
+                "check_offset": 0
+              }
+            },
+            {
+              "blocked": false,
+              "source_type": "completion",
+              "content_filter_raw": [],
+              "content_filter_results": {},
+              "content_filter_offsets": {
+                "start_offset": 0,
+                "end_offset": 28,
+                "check_offset": 0
+              }
+            }
+          ],
+          "error": null,
+          "frequency_penalty": 0.0,
+          "incomplete_details": null,
+          "instructions": null,
+          "max_output_tokens": null,
+          "max_tool_calls": null,
+          "model": "openai/gpt-6-luna",
+          "moderation": null,
+          "output": [
+            {
+              "id": "rs_0a54fb5d7b0b43cf016abc93957be08195a00e4d838298472f",
+              "type": "reasoning",
+              "content": [],
+              "encrypted_content": "gAAAAABqvJOVmTEqb8B8jciIAmyjaNucsPK1TfrhNe_IjYerDN5-gemd8z0sUt2FV09HyIL_rTBEovVLxKGVKImcBTxbgFIAcT60rN8sMiuTQFlvwp5oYAzo_ZiBrG8JISX3sDUMZuNh7MFoUQlSoQvoHdXE_CgYJo32NQLvNf01U0PIpzffOwQcp9dBSLHAdUc9lcfOK-8-H1mK8FWdpuegszRQRW6hObuHwoXhwJv2Onyj2m_KbqPgGcDJCjMa2zXciwHmv65MHcScOwCZCKAU-ZArUksYTgm9v5Dnlhtipl-JQWwAOxqisQAAdtrXJQLSs6QEUv284bMx-3mGdNZCPPyicFGBMhwxZXQCMXD6bg0vfpIBo-PHgfNF8wvmDikNNaT_qOQ4dVBzjtJxKxln0c2X1JFbqA_7jPT4-r6Paxu_F5SmOpnVnhvGimPOf2e0G2apuGEwm2Y20ESY8iQ7wGRE-Gp7Lbc5AUlSyJtfPlrZ7fqW4U5INjfzs_9yvkqIP7pa-zw5uxP6Z8WCoKTscYzWi16TOnd5ijuKELmuhZVUo4pum_fo4N1sGkmkoUSVsMbIICwzWFodDwnMuxotTr7IRsmEaW6WPyMEXdKGtHXT7ODXqvth08noSaU4J4jbwYkD470mMLq5wsC_tifBatEjHJypTDdb73hEPM9Uj8zhSlH083W8dep_--vV16CAiSSy5G4nqUzXXZDOYk1L-9hAHsRzLcr0hY2CElcah9lIxTE9LljhtTfJqMPp1QHppcqCzQXqKcrurIa-FfWazXlEBI22mgOOM3wKa40uMFbjf-gU15y0dzFW_utcpFODo2zTL3ZNiut_j7_hCLC_WOEULylwqj6lQzCO_zruYd-iiXrKCR7T4p-oWSTUSAOfB4_zfunyNh2r6CCFk62dNn4SYS2i-NQJtOVJsUb0-iR00D36ZlG94MMLyhripdRn4S2HY2a8QZfEDExqdaIzd1O9HfR17fyw1wqPj6x_553Kni41TaEUc8zXsO1KEx7pU9PZAy15t9rkEtbSla_fx3BTMrdrfBUwPt7eTegFgJTQW_puW9O9rpdXkOPO1SdGaF6h7-5zVaBwHm4p8qx5Sd9m2MuN-DHofOj_53Is-Wc6_z1lzEQOly8-QYRRKYoGQwo24L3h",
+              "summary": []
+            },
+            {
+              "id": "msg_0a54fb5d7b0b43cf016abc93958bb48195bc8ebce9518c3f01",
+              "type": "message",
+              "status": "completed",
+              "content": [
+                {
+                  "type": "output_text",
+                  "annotations": [],
+                  "logprobs": [],
+                  "text": "Paris."
+                }
+              ],
+              "phase": "final_answer",
+              "role": "assistant"
+            }
+          ],
+          "parallel_tool_calls": true,
+          "presence_penalty": 0.0,
+          "previous_response_id": null,
+          "prompt_cache_key": null,
+          "prompt_cache_retention": "24h",
+          "reasoning": {
+            "context": "all_turns",
+            "effort": "medium",
+            "mode": "standard",
+            "summary": null
+          },
+          "safety_identifier": null,
+          "service_tier": "default",
+          "store": false,
+          "temperature": 1.0,
+          "text": {
+            "format": {
+              "type": "text"
+            },
+            "verbosity": "medium"
+          },
+          "tool_choice": "auto",
+          "tool_usage": {
+            "image_gen": {
+              "input_tokens": 0,
+              "input_tokens_details": {
+                "image_tokens": 0,
+                "text_tokens": 0
+              },
+              "output_tokens": 0,
+              "output_tokens_details": {
+                "image_tokens": 0,
+                "text_tokens": 0
+              },
+              "total_tokens": 0
+            },
+            "web_search": {
+              "num_requests": 0
+            }
+          },
+          "tools": [],
+          "top_logprobs": 0,
+          "top_p": 0.98,
+          "truncation": "disabled",
+          "usage": {
+            "input_tokens": 13,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 0
+            },
+            "output_tokens": 17,
+            "output_tokens_details": {
+              "reasoning_tokens": 9
+            },
+            "total_tokens": 30
+          },
+          "user": null,
+          "metadata": {}
+        }
+  recorded_at: Wed, 30 Sep 2026 04:44:06 GMT
+recorded_with: VCR 6.4.0

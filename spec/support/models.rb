@@ -8,6 +8,8 @@ CHAT_MODELS = [
   { provider: PROVIDER, model: 'gemini-3.1-flash-lite-preview' },
   { provider: PROVIDER, model: 'google/gemini-3.1-flash-lite' },
   { provider: PROVIDER, model: 'google/gemini-3.8-flash' },
+  { provider: PROVIDER, model: 'openai/gpt-6-luna' },
+  { provider: PROVIDER, model: 'openai/gpt-5.6-luna' },
   { provider: PROVIDER, model: 'openai/gpt-5.2' },
   { provider: PROVIDER, model: 'openai/gpt-5.4' },
   { provider: PROVIDER, model: 'openai/gpt-5.4-mini' },
