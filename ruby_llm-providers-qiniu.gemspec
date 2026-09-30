@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name = 'ruby_llm-providers-qiniu'
-  spec.version = '0.1.0'
+  spec.version = '0.1.1'
   spec.authors = ['OuYangJinTing']
   spec.email = ['ou.yang.jin.ting.x@gmail.com']
 
